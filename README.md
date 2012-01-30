@@ -35,6 +35,7 @@ At that point, you have 3 parsing options:
 	// or
 	parser.parseXMLFile("http://some.xml.file", function(jxon)
 	{
+		//Do somthing
 	});
 
 ##Dependencies
