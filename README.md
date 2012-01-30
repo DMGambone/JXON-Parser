@@ -17,17 +17,21 @@ This current version of the JXON parser is very limited, only converting XML to 
 Using this JXON library is fairly straight forward.
 
 You start by instantiating an instance of the JXON Parser.
-	var parser = new JXON.Parser();
-
 At that point, you have 3 parsing options:
+
 * parser.parseNode - Converts an object implementing IXMLDOMElement interface into a JXONNode object.
-	var jxon = parser.parseNode(someXMLElement);
-
 * parser.parseXML - Converts any XML string into a JXONNode object, including all children nodes.
-	var jxon = parser.parseXML(someXMLText);
-
 * parser.parseXMLFile - Loads and converts any XML file into a JXONNode object.  parser.parseXMLFile can be either synchronous or asynchronous.
-	var jxon = parser.parseXMLFile("http://some.xml.file")
+
+##Code Example
+	var parser = new JXON.Parser();
+	var jxon = null;
+	
+	jxon = parser.parseXML(someXMLText);
+	// or
+	jxon = parser.parseNode(someXMLElement);
+	// or
+	jxon = parser.parseXMLFile("http://some.xml.file")
 	// or
 	parser.parseXMLFile("http://some.xml.file", function(jxon)
 	{
